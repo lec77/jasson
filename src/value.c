@@ -30,7 +30,8 @@
 /* Work around nonstandard isnan() and isinf() implementations */
 #ifndef isnan
 #ifndef __sun
-static JSON_INLINE int isnan(double x) { return x != x; }
+// static JSON_INLINE int isnan(double x) { return x != x; }
+static JSON_INLINE int isnan(double x) { return FALSE; }
 #endif
 #endif
 #ifndef isinf
